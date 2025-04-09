@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Romotica</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo">ROMOTICA</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Dataset - Emotional Brain Waves</h1>
+									</header>
+
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									
+									<p>This EEG brain waves dataset was collected from 21 people and involved basic emotional states: happiness and sadness, each one with 1201 and 1311, respectively.</p>										
+									
+									<a href="https://github.com/evelynespinozataype/Dataset_EEG_Emotions">DATASET - Emotional Brain Waves
+									</a>.</p>
+
+									<p>A deep analysis was performed to study the features of wavelets in brain waves for each emotional state. Measurements of amplitude (A) and frequency (f) were taken as a base to do the analysis. The Fourier Transform method was used as a mathematical function to transform the signal from the time domain to the frequency domain. The purpose of applying the Fourier method was to study not only the amplitude, but also the frequencies of wavelets</p>
+									<p>The Matlab programming platform was used to analyze the EEG raw data. We built a program to gather, clean, and process the raw data. 21 files of participants' brain waves were read by the program for each emotional state. Raw data passed through a process of cleaning. This process involved changing null or empty values by zero. Furthermore, we performed a normalization process to change to scale data from 0 to 1, because the raw data contained up to 8 digits. A scale of 1 means the highest amplitude in a wavelet, whereas 0 means the lowest.</p>.
+									<p>After this pre-processing, the Fourier Transform method was used to transform the waveform into its spectral components \cite{murugappan2013human} \cite{nie2011eeg}. The whole purpose of using the Fourier Transform is to study the brain wave in amplitude-frequency instead of amplitude-time distribution, thereby allowing efficient access of localized information about the signal. Furthermore, through the Fourier Transform, the waveform is changed into an alternative representation, characterized by sine and cosines.</p>
+									<p>Taking into account a theoretical background in signals, the Beta and Gamma frequency bands are more related to emotions. A high level of Gamma wave denotes the happiness states; Beta brain waves have a relationship with emotional arousal states. Therefore, our analysis goes on studying the frequency and amplitude of Gamma wave.</p>
+									<p></p>					 
+									<p>We employed a function to measure the wave amplitude considering the height of the wave. Likewise, the wave frequency was measured. The measurement of brain waves was made per participant. After getting all the brain wave measures, it was plotted to identify emotional state features. At first glance, it was not easy to identify amplitude and frequency characteristics to differentiate emotional states in brain waves. First, we used functions like maximum, minimum, median, average, and standard deviation to detect emotional brain wave features, but these results were not effective. Therefore, we decided to use the average function to calculate the mean of amplitude and frequency of the 21 participants for the four emotional states. Additionally, we used the frequency average values to calculate the wavelength using the formula "\textit{wavelength=1/frequency}". Then, we identified that the average values had a particular characteristic for each emotional state.
+
+									From the amplitude and frequency averages, we employed reverse engineering to rebuild the signal using the sinusoid/sine wave; it is a sine trigonometric function. This sinusoidal/sine function consists of a single frequency with a constant amplitude. Then, we use the average frequency and amplitude as parameters to the sinusoidal/sine function. After applying the function \textit{sin()} and using the \textit{plot()} function to draw the waves in Matlab, the result was the plot distribution of the waves. The wave rebuilding process was applied to the four emotional states. At first sight, it was not possible to identify the features of each emotional state. Thereby, we decided to use filters to emphasize the amplitude and frequency average of each emotional wave. As a consequence, we obtained 4 feature patterns of brain waves, one for each emotional state, as is illustrated in Figures \ref{fig:wavesfeastures}.A, \ref{fig:wavesfeastures}.B, \ref{fig:wavesfeastures}.C, and \ref{fig:wavesfeastures}.D.</p>
+									<p>This EEG brain waves dataset was collected from 21 people and involved basic emotional states: happiness and sadness, each one with 1201 and 1311, respectively.</p>
+
+									<span class="image main"><img src="images/wavesfeasturesREAL.png" alt="" /></span>
+
+									<div class="row">
+										<div class="col-3 col-12-medium">
+											<h3>Happiness features</h3>
+											<p>for the happiness emotional state, the wave had the highest amplitude 0.98 and lowest frequency 17. The wavelet was the largest like in Figure \ref{fig:wavesfeastures}.A).</p>
+										</div>
+										<div class="col-3 col-12-medium">
+											<h3>Sadness features</h3>
+											<p>in the case of the sadness emotion wave, it was the highest in amplitude 0.98 and highest in frequency 24.05. The wave feature is a bit thin compared to the happiness wave(Figure \ref{fig:wavesfeastures}.B).</p>
+										</div>
+										<div class="col-3 col-12-medium">
+											<h3>Fear features</h3>
+											<p>the fear emotion wave was a bit lower in amplitude 0.97 and a bit higher in frequency 22.62. Compared to the happiness and sadness emotion waves, this one had features of shorter wavelets (Figure \ref{fig:wavesfeastures}.C).</p>
+										</div>
+										<div class="col-3 col-12-medium">
+											<h3>Anger features</h3>
+											<p>the anger emotion wave had the lowest amplitude (0.93) and lower frequency (20.24). The anger wave feature was shorter and almost flat compared to the other emotional wave patterns (Figure \ref{fig:wavesfeastures}.D).</p>
+										</div>
+									</div>
+
+									<hr class="major" />
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li>
+											<span class="opener">Framework</span>
+											<ul>
+												<li><a href="1_analysis.html">Analysis</a></li>
+												<li><a href="2_design.html">Design</a></li>
+												<li><a href="3_development.html">Development</a></li>
+												<li><a href="4_implementation.html">Implementation</a></li>
+												<li><a href="5_experimentation.html">Experimentation</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Case Study</span>
+											<ul>
+												<li><a href="10_smartwatch.html">Smartwatch</a></li>
+												<li><a href="11_brainwave.html">Brain wave</a></li>
+												<li><a href="12_parrot.html">Parrot robot</a></li>
+												<li><a href="13_ai.html">AI</a></li>
+												<li><a href="dataset.html">Dataset</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Contact</h2>
+									</header>
+									<p>This framework is open for the comunity interested to create socioenactive systems.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">evelynespinozat@gmail.com</a></li>
+										<li class="icon solid fa-phone">(+55) 19-991160331</li>
+										<li class="icon solid fa-home">R. Saturnino de Brito, 573 - Cidade Universitária, Campinas - SP<br />
+										CEP 13083-852</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

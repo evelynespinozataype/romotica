@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ROMOTICA</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo">ROMOTICA</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Embedding AI in a Socienactive System</h1>
+									</header>
+
+									<p>This study investigates and develops a socioenactive system empowered with AI designed to foster and enhance socio-emotional interactions among participants who are connected remotely. Our solution can potentially impact the field of Human-AI Inter-action, by providing a deeper understanding of the interaction and coupling between human-AI through the socioenactive system. Our approach involves a socioenactive system based on BCI (Brain Computer Interface) composed of several components: a mind wave device, smartwatch, parrot robot, and Aquarela Virtual system (which involves physical QR toys). These components are connected to share data remotely. The mind wave device and smartwatch collect neurophysiological information, and AI algorithms process these data to recog-nize emotions via a machine learning technique. Our solution explores tree algorithms to recognize emotions in heart rate (ECG) data. The evaluation conducted in a workshop with participants from different nationali-ties and ages demonstrates that the socioenactive system with embedded AI is a key driver of socio-emotional interactions. The system’s ability to interpret and utilize neurophysiological information to facilitate dynamic coupling between humans and technological processes might significantly advance Human-AI Interaction. The entire research project could be accessed in the following study <a href="">"Remote Emotional Interactions via AI-enhanced Brain-to-Body Neurophysiological Interface"</a></p>
+
+									<p>We present the steps for embedding AI in a system.</p>
+
+									<hr class="major" />
+
+									<h2>A) Choosing an AI algorithm</h2>
+									<p>To include AI in our socioenactive system, we have reviewed machine learning and deep learning techniques applied in AI for brain waves. We found more articles using machine learning than deep learning regarding emotion classification/recognition in brain waves (EEG). The literature review results showed that Support Vector Machine (SVM) is a machine learning method largely used as a kernel for classification tools. In the last years, the SVM algorithm has been mainly used in EEG classification to study emotions, as described in articles [\cite{blanco2024real}, \cite{huang2023recognition}, \cite{jianbiao2023eeg}, \cite{sacca2018classification}, \cite{sai2017automated}].</p>
+
+									<hr class="major" />
+
+									<h2>B) Choosing a Dataset</h2>
+									<p>In previous work, we have developed a dataset of emotional brain waves <omitted for blind review>. This EEG brain waves dataset was collected from 21 people and involved basic emotional states: happiness, sadness, fear, and anger, each one with 1201, 1311, 1311, and 1486 records, respectively. The dataset contains frequency bands data: delta','theta','alpha', 'beta', and 'gamma'. These data were analyzed using the Fourier Transform method; the result showed features in amplitude and frequency to differentiate emotional states in brain waves. Considering this dataset, we continue with the following step.</p>
+
+									<hr class="major" />
+
+									<h2>C) Pre-processing the Dataset</h2>
+									<p>We prepared and cleaned the dataset to make it more suitable for our machine-learning algorithm (which will be shown in the following step). This step aims to reduce the complexity, prevent overfitting, and improve the model's overall performance. The dataset contains data on brain waves of four emotional states: happiness, sadness, fear, and anger. The process used to pre-process the data involved the following steps: removing duplicates, removing irrelevant data, converting data type, clear formatting, fixing errors, and handling missing values.</p>
+									
+									<h2>D) Dataset Organization</h2>
+									<p>In this step, the brain waves data was organized to train and test the machine learning algorithm. We split our dataset into two subsets: training and testing with 70\% and 30\% of data, respectively \cite{uccar2020effect}. The training data was used to train the machine learning algorithm. The testing data was used to evaluate the accuracy of the trained algorithm. Both data groups contain four data classes: happiness, sadness, fear, and anger, each one with 1201, 1311, 1311, and 1486 brain wave records, respectively. Figure \ref{f:c5-AIstatistics} shows the data proportions used in this research project.</p>
+
+									<a href="#" class="image"><img src="images/c5-AIstatistics.png" alt="" /></a>
+
+									<h2>E) Model Development</h2>
+									<p>For the data pre-processing and the development of the machine learning model, we use the following libraries: Python, Pandas, Numpy, Matplotlib, Sklearn, Seaborn.</p>
+									<p>In the beginning, the model was developed to classify two signal classes (happiness and sadness). Afterward, it was adapted to classify four signal classes (happiness, sadness, fear, and anger). The objective in developing these two models was to identify the levels of accuracy that the model could achieve in classifying two and four emotion types. The results are shown in the next step.</p>
+
+									<h2>F) Model Results</h2>
+									<p>After the Machine Learning model development, we executed it to get classification results. So, we used the confusion matrix, which is a table used to evaluate the performance of a machine-learning algorithm. It allows us to evaluate the accuracy of the signal classification. The confusion matrix in Figure \ref{f:c5-confusioHS} and \ref{f:c5-confusioHSFAv2} show how many samples were correctly and incorrectly classified by the algorithm in each class. The SVM model produced can be accessed in the following link \href{https://deepnote.com/workspace/espinozat-b139741c-c6fc-47c2-a1a3-07bcdf9a788d/project/EEG-bcdb8db7-ea1c-4d5e-9095-cb949f2d22ae/notebook/SVMEEG-4c1ba2b5aec84b34b398a0ca6ccf0de4}{"SVM to classify emotions in brain waves"}.</p>
+									
+									<h2>G) Embedding the AI Model in the Socioenactive System</h2>
+									<p>After developing, training, and getting the model's results, the next step involves embedding the model in the socioenactive system.</p>
+									
+									<h2>Heart Rate</h2>
+									<p>After implementing the AI based on brain waves, we added heart rate physiological measurements to improve the AI results. So, we worked with the ECG component (Smartwatch). %\textbf{Peaks Analysis} We inquired about heart rate peaks to extract knowledge from the heart rate signals collected by the smartwatch application. According to \cite{pollreisz2017simple}, the peaks always have similar heights. Hence, the peaks were categorized into two groups with different heights. A peak’s height is lower than 100 is classified as a slight peak; if it is higher than 100, it is considered a significant peak. The rationale behind the value 100 involves estimations using the max value in the sequence of heart rate. An example is shown in Figure \ref{f:c8-heartrate}, where (a) big and (b) small peaks are automatically tagged by the proposed system. Thus, we analyzed all signals, and whenever a small or large peak was detected, its respective counter was increased. These statistical analyses were then used to categorize the signals into two groups: (i) Signals with a height over 100 as happiness emotion, and (ii) signals with a height lower than 100 were classified as sadness emotion. 5) Classification: The classification is done via a decision tree based on statistical information. First, it starts by analyzing the peaks. For example, if there are sequences of significant peaks in the measured signal, a counter is increased for the happiness emotion. However, if there are minor peaks in the signal, the counter for the sadness emotion is increased. At the end, the probability of occurrence of each emotion is calculated in percentage based on the value of the counters for each emotion.<p/><p>This algorithm was joined with the AI developed previously to give autonomy to the socioenactive system regarding the decisions of emotion recognition in neurophysiological information.</p>
+
+									<h2></h2>
+									<p></p>
+									
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li>
+											<span class="opener">Framework</span>
+											<ul>
+												<li><a href="1_analysis.html">Analysis</a></li>
+												<li><a href="2_design.html">Design</a></li>
+												<li><a href="3_development.html">Development</a></li>
+												<li><a href="4_implementation.html">Implementation</a></li>
+												<li><a href="5_experimentation.html">Experimentation</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Case Study</span>
+											<ul>
+												<li><a href="21_emotions.html">Emotional Contagion</a></li>
+												<li><a href="22_ai.html">AI</a></li>
+												<li><a href="23_dataset.html">Dataset</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+							
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Contact</h2>
+									</header>
+									<p>This framework is open for the comunity interested to create socioenactive systems.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">evelynespinozat@gmail.com</a></li>
+										<li class="icon solid fa-phone">(+55) 19-991160331</li>
+										<li class="icon solid fa-home">R. Saturnino de Brito, 573 - Cidade Universitária, Campinas - SP<br />
+										CEP 13083-852</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
